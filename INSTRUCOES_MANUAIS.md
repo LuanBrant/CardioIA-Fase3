@@ -86,23 +86,16 @@ real**:
 4. `uvicorn api_server:app --reload`
 5. `python api_client.py --crisis` → o e-mail será enviado de verdade.
 
-## 5. Ir Além 2 – Vídeo YouTube (≤ 4 min)
+## 5. Entrega final FIAP
 
-Roteiro pronto está em
-[`ir-alem-2-ia-series-temporais/README.md`](ir-alem-2-ia-series-temporais/README.md#video-entregar-manualmente).
-
-1. Grave a tela rodando o notebook e narrando.
-2. Suba no YouTube como **Não listado**.
-3. Edite o link no README dessa pasta.
-
-## 6. Entrega final FIAP
-
-1. Faça **commit + push** de eventuais alterações (links Wokwi, prints,
-   link do vídeo).
-2. Anexe o `.zip` (ou a URL do repositório GitHub) na atividade da
-   plataforma FIAP, junto com:
+1. Faça **commit + push** de eventuais alterações (links Wokwi, prints).
+2. Anexe a URL do repositório GitHub na atividade da plataforma FIAP,
+   junto com:
    - Link Wokwi (Parte 1)
    - Link Wokwi (Parte 2)
-   - Link do YouTube (Ir Além 2)
 
-Pronto. Boa nota. 🚀
+> O vídeo do "Ir Além 2" não será entregue – toda a análise está no
+> [`RELATORIO.md`](ir-alem-2-ia-series-temporais/RELATORIO.md) e no
+> notebook executável `cardioia_timeseries.ipynb`.
+
+Pronto. Boa nota.

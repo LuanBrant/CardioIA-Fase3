@@ -44,17 +44,9 @@ print('LIF:   '); print(classification_report(yte, lif.predict(Xte)))
 "
 ```
 
-## Vídeo (entregar manualmente)
+## Vídeo
 
-Postar no YouTube como **não listado** e atualizar este link:
-
-> `https://youtu.be/<seu-id>`
-
-Roteiro sugerido (máx. 4 min):
-
-1. Contextualizar o projeto CardioIA (30 s).
-2. Mostrar geração dos sinais sintéticos no notebook (45 s).
-3. Rodar regressão logística e comentar métricas (45 s).
-4. Rodar LIF e comentar firing rate / threshold (60 s).
-5. Comparar tabelas / discutir trade-offs (30 s).
-6. Encerramento (30 s).
+O vídeo de apresentação é entregável **opcional** (item de "Ir Além") e
+não será produzido nesta entrega. Toda a análise comparativa está
+documentada por escrito em [`RELATORIO.md`](RELATORIO.md) e
+reprodutível em `cardioia_timeseries.ipynb`.
