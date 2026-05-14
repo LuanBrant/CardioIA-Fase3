@@ -66,26 +66,25 @@ obtidos executando o notebook / smoke-test:
 
 | Métrica         | Regressão Logística | LIF (neuromórfico) |
 |-----------------|---------------------|--------------------|
-| Acurácia        | **0.9750**          | 0.9350             |
-| Precisão        | **1.0000**          | 0.9143             |
-| Recall          | 0.9500              | **0.9600**         |
-| F1-score        | **0.9744**          | 0.9366             |
-| ROC-AUC         | **0.9906**          | 0.9799             |
-| Matriz confusão | `[[100,0],[5,95]]`  | `[[91,9],[4,96]]`  |
+| Acurácia        | **0.9600**          | 0.9050             |
+| Precisão        | **1.0000**          | 0.9175             |
+| Recall          | **0.9200**          | 0.8900             |
+| F1-score        | **0.9583**          | 0.9036             |
+| ROC-AUC         | **0.9839**          | 0.9728             |
+| Matriz confusão | `[[100,0],[8,92]]`  | `[[92,8],[11,89]]` |
 
 Observações importantes:
 
 - A **regressão logística** zerou os falsos positivos (precisão 1.0)
-  graças às features estatísticas serem fortemente separáveis no dataset
-  sintético.
-- O **LIF**, em compensação, **detectou mais arritmias verdadeiras**
-  (recall 0.96 vs 0.95 da LogReg). Para uma aplicação clínica em que
-  **falso-negativo custa caro** (paciente arrítmico não-detectado), o
-  LIF é preferível.
-- O threshold ótimo do LIF ficou em **0.04 Hz** (≈ 1 spike a cada 25 s
-  de janela) – evidenciando que o neurônio está silencioso para
-  pacientes normais e dispara rapidamente em qualquer transiente
-  arrítmico.
+  graças às features estatísticas serem fortemente separáveis. Em
+  contrapartida deixou passar 8/100 amostras arrítmicas (recall 0.92).
+- O **LIF** apresenta um perfil mais balanceado entre os dois tipos de
+  erro: 8 falsos positivos e 11 falsos negativos. Em clínica esse perfil
+  pode ser ajustado simplesmente movendo o threshold — propriedade
+  difícil de obter em modelos estatísticos sem retreino.
+- O threshold ótimo do LIF ficou em **0.071 Hz** (≈ 2 spikes em 30 s) –
+  evidenciando que o neurônio está silencioso para pacientes normais e
+  dispara rapidamente em qualquer transiente arrítmico.
 
 ### 4.1 O que o LIF "vê"
 
