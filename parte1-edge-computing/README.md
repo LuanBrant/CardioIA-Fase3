@@ -44,7 +44,6 @@ pio run                       # compila
 - Bradicardia: `BPM < 40`
 - Sudorese intensa: `UMID > 85 %`
 
-## Link Wokwi (a preencher manualmente)
+## Link Wokwi
 
-> Após salvar no Wokwi Web, cole aqui a URL pública do seu projeto:
-> `https://wokwi.com/projects/<seu-id>`
+**https://wokwi.com/projects/464008006272352257**

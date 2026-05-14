@@ -33,8 +33,8 @@ Cada subpasta tem seu próprio **`README.md`** (como rodar) e
 ## Mapeamento dos entregáveis pedidos pelo enunciado
 
 ### Parte 1 – Edge Computing
-- ✅ Link do projeto no Wokwi → **adicionar manualmente** em
-  `parte1-edge-computing/README.md` após salvar no Wokwi Web.
+- ✅ Link do projeto no Wokwi:
+  **https://wokwi.com/projects/464008006272352257**
 - ✅ Código C++ comentado: [`parte1-edge-computing/src/main.cpp`](parte1-edge-computing/src/main.cpp)
   e [`parte1-edge-computing/sketch.ino`](parte1-edge-computing/sketch.ino).
 - ✅ Relatório (≥ 1 página): [`parte1-edge-computing/RELATORIO.md`](parte1-edge-computing/RELATORIO.md).
