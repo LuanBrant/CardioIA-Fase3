@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "Luan Brant - CardioIA Fase 3",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -120, "left": 220,
+      "attrs": { "temperature": "32", "humidity": "55" } },
+    { "type": "wokwi-pushbutton", "id": "btnPulse", "top": 130, "left": -160,
+      "attrs": { "color": "red", "label": "PULSO" } },
+    { "type": "wokwi-pushbutton", "id": "btnWifi", "top": 130, "left": 30,
+      "attrs": { "color": "blue", "label": "WIFI" } },
+    { "type": "wokwi-led", "id": "ledWifi", "top": -40, "left": -160,
+      "attrs": { "color": "green", "label": "WIFI" } },
+    { "type": "wokwi-led", "id": "ledAlert", "top": -40, "left": -100,
+      "attrs": { "color": "red", "label": "ALERTA" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 0, "left": -210,
+      "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 0, "left": -130,
+      "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:D4",   "dht1:SDA",    "green",  [ "v-20", "h60" ] ],
+    [ "esp:3V3",  "dht1:VCC",    "red",    [ "v-40", "h80" ] ],
+    [ "esp:GND.1","dht1:GND",    "black",  [ "v-60", "h100" ] ],
+
+    [ "esp:D5",   "btnPulse:1.l","green",  [ "v40",  "h-100" ] ],
+    [ "btnPulse:2.r","esp:GND.2","black",  [ "v0",   "h0"   ] ],
+
+    [ "esp:D18",  "btnWifi:1.l", "purple", [ "v60",  "h0"   ] ],
+    [ "btnWifi:2.r","esp:GND.3", "black",  [ "v0",   "h0"   ] ],
+
+    [ "esp:D2",   "r1:1",        "orange", [ "v0",   "h-60" ] ],
+    [ "r1:2",     "ledWifi:A",   "orange", [ "v0",   "h0"   ] ],
+    [ "ledWifi:C","esp:GND.4",   "black",  [ "v40",  "h0"   ] ],
+
+    [ "esp:D15",  "r2:1",        "yellow", [ "v0",   "h0"   ] ],
+    [ "r2:2",     "ledAlert:A",  "yellow", [ "v0",   "h0"   ] ],
+    [ "ledAlert:C","esp:GND.4",  "black",  [ "v40",  "h0"   ] ]
+  ],
+  "dependencies": {}
+}

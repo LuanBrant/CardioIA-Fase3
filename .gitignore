@@ -1,0 +1,30 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Editores
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Saidas / logs
+*.log
+.env
+
+# Builds
+build/
+dist/
+*.egg-info/
